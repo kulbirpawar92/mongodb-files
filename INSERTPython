@@ -1,0 +1,22 @@
+# BEFORE INSERTING ONE DOCUMENT IN TRACKER COLLECTION
+
+collection1 = db.tracker
+for rec1 in collection1.find():
+    print(rec1)
+
+print("\n")
+
+# CODE TO INSERT DOCUMENT IN TRACKER
+col2 = db.tracker
+tr = {
+    "tracker_id" : 300,
+    "ord_id" : 10,
+    "shipping_details" : 'Home',
+    "exp_del_date": "2020-01-01"
+}
+record1 = col2.insert_one(tr)
+
+# AFTER INSERTING DOCUMENT IN COLLECTION TRACKER IT'S LIKE
+collection1 = db.tracker
+for rec1 in collection1.find():
+    print(rec1)
