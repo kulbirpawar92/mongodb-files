@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"customerdb.tracker"}],"uuid":"af2f4ebeb1f24e7cb9d7094db6491b40"}
