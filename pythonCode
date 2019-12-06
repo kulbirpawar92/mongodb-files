@@ -1,0 +1,25 @@
+from pymongo import MongoClient
+try:
+    client = MongoClient('localhost', 27017)
+    print("Connected successfully!!!")
+except:
+    print("Could not connect to MongoDB")
+db= client .customerdb
+print(db.collection_names())
+
+# get documents from colection custInfo
+collection1 = db.custInfo
+print("Document in collection custInfo")
+try:
+    for rec1 in collection1.find():
+        print(rec1)
+    print("Connected Successfully")
+except:
+    print("Could not to connect successfully")
+print("\n")
+
+# BEFORE INSERTING ONE DOCUMENT IN TRACKER COLLECTION
+
+collection1 = db.tracker
+for rec1 in collection1.find():
+    print(rec1)
